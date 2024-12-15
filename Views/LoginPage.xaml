@@ -54,7 +54,7 @@
                 <PasswordBox Name="PasswordBox" />
             </StackPanel>
 
-            <!-- Bouton de connexion -->
+          
             <Button Content="Connexion" Click="LoginButton_Click" HorizontalAlignment="Center" Margin="0,20,0,0"/>
         </StackPanel>
     </Grid>

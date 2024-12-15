@@ -34,3 +34,4 @@ C:\Users\hp\.vscode\dotnet\NomDuProjet\bin\Debug\net9.0-windows\runtimes\win-x64
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuPro.9C980C88.Up2Date
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\LoginPage.g.cs
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\LoginPage.baml
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.sourcelink.json
