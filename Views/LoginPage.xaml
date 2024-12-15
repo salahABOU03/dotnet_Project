@@ -1,0 +1,61 @@
+<Window x:Class="NomDuProjet.Views.LoginPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:NomDuProjet.Views"
+        Title="Login" Height="300" Width="400" Background="#f4f4f4">
+
+    <Window.Resources>
+        <!-- Style pour les TextBox -->
+        <Style TargetType="TextBox">
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#4CAF50"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="250"/>
+        </Style>
+
+        <!-- Style pour les PasswordBox -->
+        <Style TargetType="PasswordBox">
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#4CAF50"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="250"/>
+        </Style>
+
+        <!-- Style pour le Button -->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#4CAF50"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="BorderBrush" Value="#4CAF50"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <!-- Libellé et champ pour le nom d'utilisateur -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <TextBlock Text="Nom d'utilisateur" VerticalAlignment="Center" Margin="0,0,10,0" />
+                <TextBox Name="UsernameTextBox" />
+            </StackPanel>
+
+            <!-- Libellé et champ pour le mot de passe -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <TextBlock Text="Mot de passe" VerticalAlignment="Center" Margin="0,0,10,0" />
+                <PasswordBox Name="PasswordBox" />
+            </StackPanel>
+
+            <!-- Bouton de connexion -->
+            <Button Content="Connexion" Click="LoginButton_Click" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
