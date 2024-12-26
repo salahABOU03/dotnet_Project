@@ -1,13 +1,14 @@
 using MySql.Data.MySqlClient;
 using System;
 
-namespace HotelReservationApp.Helpers
-{
+namespace NomDuProjet.DB;
+
     public static class DatabaseHelper
     {
         
+        
         private static readonly string ConnectionString =
-            "Server=localhost;Database=hotel_reservation;User ID=root;Password=;Pooling=true;";
+            "Server=localhost;Database=hotelreservationa;User ID=root;Password=;Pooling=true;";
 
                public static MySqlConnection GetConnection()
         {
@@ -43,4 +44,4 @@ namespace HotelReservationApp.Helpers
             }
         }
     }
-}
+

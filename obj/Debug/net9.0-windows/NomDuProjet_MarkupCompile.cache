@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP
 C:\Users\hp\.vscode\dotnet\NomDuProjet\App.xaml
-22110224863
+31547135167
 
-6-1096259407
+17-2127863323
 208-1437432908
-Views\LoginPage.xaml;Views\MainWindow.xaml;
+Views\AddClientWindow.xaml;Views\LoginPage.xaml;Views\MainWindow.xaml;
 
 False
 
