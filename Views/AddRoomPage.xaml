@@ -1,0 +1,28 @@
+<Window x:Class="NomDuProjet.Views.AddRoomPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ajouter une Chambre" Height="400" Width="400" WindowStartupLocation="CenterScreen" Background="#f9f9f9">
+    <StackPanel Margin="20">
+
+        <!-- Title -->
+        <TextBlock Text="Ajouter une Chambre" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,20" />
+
+        <!-- Room Number -->
+        <Label Content="Numéro de Chambre" />
+        <TextBox Name="RoomNumberTextBox" Width="300" />
+
+        <!-- Room Type -->
+        <Label Content="Type de Chambre" />
+        <TextBox Name="RoomTypeTextBox" Width="300" />
+
+        <!-- Availability -->
+        <CheckBox Name="IsAvailableCheckBox" Content="Disponible" />
+
+        <!-- Select Image Button -->
+        <Button Name="SelectImageButton" Content="Sélectionner une Image" Width="300" Margin="0,10,0,10" Click="SelectImageButton_Click" />
+
+        <!-- Add Room Button -->
+        <Button Name="AddRoomButton" Content="Ajouter la Chambre" Width="300" Background="#4CAF50" Foreground="White" Click="AddRoomButton_Click" />
+
+    </StackPanel>
+</Window>

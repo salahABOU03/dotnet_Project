@@ -11,15 +11,16 @@ namespace DAO
         // Création d'une chambre dans la base de données
         public bool Create(Room room)
         {
-            const string query = "INSERT INTO Rooms (RoomNumber, RoomTypeId, IsAvailable) VALUES (@RoomNumber, @RoomTypeId, @IsAvailable)";
+            const string query = "INSERT INTO Rooms (RoomNumber, RoomType, IsAvailable, Image) VALUES (@RoomNumber, @RoomType, @IsAvailable, @Image)";
             try
             {
                 using (var connection = DatabaseHelper.GetConnection())
                 using (var command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@RoomNumber", room.RoomNumber);
-                    command.Parameters.AddWithValue("@RoomTypeId", room.RoomTypeId);
+                    command.Parameters.AddWithValue("@RoomType", room.RoomType);
                     command.Parameters.AddWithValue("@IsAvailable", room.IsAvailable);
+                    command.Parameters.AddWithValue("@Image", room.Image ?? (object)DBNull.Value); // Ajouter l'image
 
                     return command.ExecuteNonQuery() > 0;
                 }
@@ -55,7 +56,7 @@ namespace DAO
         // Mise à jour d'une chambre dans la base de données
         public bool Update(Room room)
         {
-            const string query = "UPDATE Rooms SET RoomNumber = @RoomNumber, RoomTypeId = @RoomTypeId, IsAvailable = @IsAvailable WHERE Id = @Id";
+            const string query = "UPDATE Rooms SET RoomNumber = @RoomNumber, RoomType = @RoomType, IsAvailable = @IsAvailable, Image = @Image WHERE Id = @Id";
             try
             {
                 using (var connection = DatabaseHelper.GetConnection())
@@ -63,8 +64,9 @@ namespace DAO
                 {
                     command.Parameters.AddWithValue("@Id", room.Id);
                     command.Parameters.AddWithValue("@RoomNumber", room.RoomNumber);
-                    command.Parameters.AddWithValue("@RoomTypeId", room.RoomTypeId);
+                    command.Parameters.AddWithValue("@RoomType", room.RoomType);
                     command.Parameters.AddWithValue("@IsAvailable", room.IsAvailable);
+                    command.Parameters.AddWithValue("@Image", room.Image ?? (object)DBNull.Value); // Ajouter l'image
 
                     return command.ExecuteNonQuery() > 0;
                 }
@@ -95,8 +97,9 @@ namespace DAO
                             {
                                 Id = reader.GetInt32("Id"),
                                 RoomNumber = reader.GetInt32("RoomNumber"),
-                                RoomTypeId = reader.GetInt32("RoomTypeId"),
-                                IsAvailable = reader.GetBoolean("IsAvailable")
+                                RoomType = reader.GetString("RoomType"),
+                                IsAvailable = reader.GetBoolean("IsAvailable"),
+                                Image = reader.IsDBNull(reader.GetOrdinal("Image")) ? null : (byte[])reader["Image"] // Récupérer l'image
                             };
                         }
                     }
@@ -129,8 +132,9 @@ namespace DAO
                             {
                                 Id = reader.GetInt32("Id"),
                                 RoomNumber = reader.GetInt32("RoomNumber"),
-                                RoomTypeId = reader.GetInt32("RoomTypeId"),
-                                IsAvailable = reader.GetBoolean("IsAvailable")
+                                RoomType = reader.GetString("RoomType"),
+                                IsAvailable = reader.GetBoolean("IsAvailable"),
+                                Image = reader.IsDBNull(reader.GetOrdinal("Image")) ? null : (byte[])reader["Image"] // Récupérer l'image
                             });
                         }
                     }
@@ -143,5 +147,44 @@ namespace DAO
 
             return rooms;
         }
+
+        // DAO/RoomDAO.cs
+public List<Room> GetAvailableRooms()
+{
+    const string query = "SELECT * FROM Rooms WHERE IsAvailable = @IsAvailable";
+    List<Room> rooms = new List<Room>();
+
+    try
+    {
+        using (var connection = DatabaseHelper.GetConnection())
+        using (var command = new MySqlCommand(query, connection))
+        {
+            command.Parameters.AddWithValue("@IsAvailable", true); // Filtrer les chambres disponibles
+
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    rooms.Add(new Room
+                    {
+                        Id = reader.GetInt32("Id"),
+                        RoomNumber = reader.GetInt32("RoomNumber"),
+                        RoomType = reader.GetString("RoomType"),
+                        IsAvailable = reader.GetBoolean("IsAvailable"),
+                        Image = reader.IsDBNull(reader.GetOrdinal("Image")) ? null : (byte[])reader["Image"]
+                    });
+                }
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        
+        Console.WriteLine($"Error retrieving available rooms: {ex.Message}");
+    }
+
+    return rooms;
+}
+
     }
 }

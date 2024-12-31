@@ -1,3 +1,15 @@
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.csproj.AssemblyReference.cache
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\AddClientWindow.baml
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\AddRoomPage.baml
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ClientListPage.baml
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\AddClientWindow.g.cs
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\AddRoomPage.g.cs
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ClientListPage.g.cs
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\LoginPage.g.cs
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\MainWindow.g.cs
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\App.g.cs
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet_MarkupCompile.cache
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet_MarkupCompile.lref
 C:\Users\hp\.vscode\dotnet\NomDuProjet\bin\Debug\net9.0-windows\NomDuProjet.exe
 C:\Users\hp\.vscode\dotnet\NomDuProjet\bin\Debug\net9.0-windows\NomDuProjet.deps.json
 C:\Users\hp\.vscode\dotnet\NomDuProjet\bin\Debug\net9.0-windows\NomDuProjet.runtimeconfig.json
@@ -15,12 +27,6 @@ C:\Users\hp\.vscode\dotnet\NomDuProjet\bin\Debug\net9.0-windows\runtimes\win-x64
 C:\Users\hp\.vscode\dotnet\NomDuProjet\bin\Debug\net9.0-windows\runtimes\win-x64\native\k5sprt64.dll
 C:\Users\hp\.vscode\dotnet\NomDuProjet\bin\Debug\net9.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\hp\.vscode\dotnet\NomDuProjet\bin\Debug\net9.0-windows\runtimes\win-x64\native\krbcc64.dll
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.csproj.AssemblyReference.cache
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\LoginPage.g.cs
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\MainWindow.g.cs
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\App.g.cs
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet_MarkupCompile.cache
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet_MarkupCompile.lref
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\LoginPage.baml
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\MainWindow.baml
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.g.resources
@@ -35,5 +41,6 @@ C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\refint\NomDuProj
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.pdb
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.genruntimeconfig.cache
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\ref\NomDuProjet.dll
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\AddClientWindow.baml
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\AddClientWindow.g.cs
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\RoomViewModel.g.cs
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\RoomViewModel.baml
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs

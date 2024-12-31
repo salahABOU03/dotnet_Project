@@ -12,23 +12,24 @@ namespace NomDuProjet.Views
             InitializeComponent();
         }
 
+        // Bouton Ajouter
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            // Collect user input
+            // Récupération des données
             string firstName = FirstNameTextBox.Text.Trim();
             string lastName = LastNameTextBox.Text.Trim();
             string email = EmailTextBox.Text.Trim();
             string phoneNumber = PhoneNumberTextBox.Text.Trim();
 
-            // Validate input
-            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) ||
-                string.IsNullOrEmpty(email) || string.IsNullOrEmpty(phoneNumber))
+            // Validation des données
+            if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName) ||
+                string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(phoneNumber))
             {
                 MessageBox.Show("Veuillez remplir tous les champs.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            // Create client object
+            // Création de l'objet Client
             var client = new Client
             {
                 FirstName = firstName,
@@ -37,22 +38,30 @@ namespace NomDuProjet.Views
                 PhoneNumber = phoneNumber
             };
 
-            // Save client using DAO
-            var dao = new ClientDAO();
-            if (dao.Create(client))
+            // Ajout dans la base de données via DAO
+            var clientDAO = new ClientDAO();
+            try
             {
-                MessageBox.Show("Client ajouté avec succès.", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
-               // this.Close(); // Close window after success
+                if (clientDAO.Create(client))
+                {
+                    MessageBox.Show("Client ajouté avec succès.", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
+                    this.Close(); // Fermer la fenêtre après succès
+                }
+                else
+                {
+                    MessageBox.Show("Erreur lors de l'ajout du client.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Erreur lors de l'ajout du client.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Erreur : {ex.Message}", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
+        // Bouton Annuler
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close(); // Close window on cancel
+            this.Close(); // Fermer la fenêtre
         }
     }
 }

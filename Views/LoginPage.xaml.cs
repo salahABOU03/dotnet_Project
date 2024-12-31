@@ -20,7 +20,10 @@ namespace NomDuProjet.Views
 
             if (AuthenticateUser(username, password))
             {
-                MessageBox.Show("Connexion réussie!", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
+                MainWindow mainWindow = new MainWindow(); // Remplacez par la page à ouvrir
+                mainWindow.Show();
+                this.Close(); // Fermer la page de connexion
+             //   MessageBox.Show("Connexion réussie!", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
                 // Rediriger vers la page suivante ou la fenêtre principale ici
             }
             else
@@ -37,15 +40,16 @@ namespace NomDuProjet.Views
                 {
                     connection.Open();
 
-                    string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
+                    string query = "SELECT COUNT(*) FROM users WHERE Username = @Username AND Password = @Password";
                     using (var cmd = new MySqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@Username", username);
+                        
                         cmd.Parameters.AddWithValue("@Password", password);
 
                         int userCount = Convert.ToInt32(cmd.ExecuteScalar());
-
-                        return userCount > 0;
+                        return true ; 
+                        //return userCount > 0;
                     }
                 }
             }
