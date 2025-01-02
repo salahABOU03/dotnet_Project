@@ -11,16 +11,16 @@
         <!-- Fond d'écran -->
         <Image Source="images.jpeg" Stretch="Fill" Opacity="0.3" />
 
+        <!-- Logo "S" -->
+        <TextBlock Text="S" FontSize="50" FontWeight="Bold" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,10,0,0" />
 
         <!-- Menu de navigation (NavBar) -->
         <DockPanel>
             <Menu DockPanel.Dock="Top" Height="50" Background="#34495e" Foreground="White">
                 <MenuItem Header="Dashboard" Padding="10,5"/>
-                <MenuItem Header="Manage Clients" Padding="10,5"/>
-                <MenuItem Header="Manage Reservations" Padding="10,5"/>
-                <MenuItem Header="Manage Rooms" Padding="10,5"/>
-                <MenuItem Header="Manage Payments" Padding="10,5"/>
-                <MenuItem Header="Settings" Padding="10,5"/>
+                <MenuItem Click="ManageClients_Click" Header="Manage Clients" Padding="10,5"/>
+                <MenuItem Click="Reserver_Click" Header="Manage Reservations" Padding="10,5"/>
+                <MenuItem Click="AddRoomPage_Click" Header="Manage Rooms" Padding="10,5"/>
             </Menu>
 
             <!-- Contenu principal -->
@@ -30,12 +30,11 @@
 
                 <!-- Section des boutons d'actions -->
                 <StackPanel Margin="0,40" VerticalAlignment="Top">
-                    <Button Content="View Clients" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#1abc9c" Foreground="White" BorderBrush="#16a085" BorderThickness="2" Padding="10"/>
-                    <Button Content="View Reservations" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#3498db" Foreground="White" BorderBrush="#2980b9" BorderThickness="2" Padding="10"/>
-                    <Button Content="View Rooms" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#f39c12" Foreground="White" BorderBrush="#e67e22" BorderThickness="2" Padding="10"/>
-                    <Button Content="View Payments" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#9b59b6" Foreground="White" BorderBrush="#8e44ad" BorderThickness="2" Padding="10"/>
-                    <Button Content="Manage Settings" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#2ecc71" Foreground="White" BorderBrush="#27ae60" BorderThickness="2" Padding="10"/>
-                </StackPanel>
+                    <Button Content="View Clients"  Click="ViewClients_Click" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#1abc9c" Foreground="White" BorderBrush="#16a085" BorderThickness="2" Padding="10"/>
+                    <Button Content="View Reservations" Click="ViewReservations_Click" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#3498db" Foreground="White" BorderBrush="#2980b9" BorderThickness="2" Padding="10"/>
+                    <Button Content="View Rooms" Click="ViewRooms_Click" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#f39c12" Foreground="White" BorderBrush="#e67e22" BorderThickness="2" Padding="10"/>
+                         <Button Content="Télécharger le pdf" Click="DownloadPdfButton_Click" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#f39c12" Foreground="White" BorderBrush="#e67e22" BorderThickness="2" Padding="10"/>
+                        </StackPanel>
             </Grid>
         </DockPanel>
     </Grid>

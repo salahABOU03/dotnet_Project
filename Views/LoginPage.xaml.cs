@@ -1,5 +1,7 @@
 using System;
+using System.IO;
 using System.Windows;
+using Microsoft.Win32;
 using MySql.Data.MySqlClient;
 
 namespace NomDuProjet.Views
@@ -12,7 +14,7 @@ namespace NomDuProjet.Views
         {
             InitializeComponent();
         }
-
+ 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         { 
             string username = UsernameTextBox.Text;
@@ -31,6 +33,8 @@ namespace NomDuProjet.Views
                 MessageBox.Show("Nom d'utilisateur ou mot de passe incorrect.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        
 
         private bool AuthenticateUser(string username, string password)
         {

@@ -10,6 +10,8 @@
             <RowDefinition/>
             <RowDefinition Height="Auto"/>     
         </Grid.RowDefinitions>
+  <!-- Titre principal -->
+        <TextBlock Grid.Row="0" Text="Réservation" FontSize="24" FontWeight="Bold" Foreground="#4A90E2" HorizontalAlignment="Center" Margin="0,0,0,10"/>
 
         <!-- Liste des réservations -->
         <ListView Grid.Row="0" ItemsSource="{Binding Reservations}" 

@@ -19,11 +19,17 @@ C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.cspr
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\AddClientWindow.baml
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\AddRoomPage.baml
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ClientListPage.baml
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\First.baml
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ListeReservations.baml
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ListeRomm.baml
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\Reserver.baml
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\RoomListPage.baml
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\AddClientWindow.g.cs
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\AddRoomPage.g.cs
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ClientListPage.g.cs
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\First.g.cs
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ListeReservations.g.cs
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ListeRomm.g.cs
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\LoginPage.g.cs
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\MainWindow.g.cs
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\Reserver.g.cs
@@ -45,7 +51,3 @@ C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\refint\NomDuProj
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.pdb
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.genruntimeconfig.cache
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\ref\NomDuProjet.dll
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ListeRomm.baml
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ListeRomm.g.cs
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ListeReservations.baml
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ListeReservations.g.cs
