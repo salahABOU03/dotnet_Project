@@ -4,6 +4,8 @@ using System.Windows;
 using NomDuProjet.Models;
 using DAO;
 using System.Windows.Controls;
+using System.Net;
+using System.Net.Mail;
 
 namespace NomDuProjet
 {
@@ -32,7 +34,7 @@ namespace NomDuProjet
             DataContext = this;
         }
 
-      private void SubmitReservation(object sender, RoutedEventArgs e)
+     private void SubmitReservation(object sender, RoutedEventArgs e)
 {
     // Récupérer les valeurs directement des TextBox et DatePicker
     var clientNameTextBox = this.FindName("txtClientName") as TextBox;
@@ -82,6 +84,9 @@ namespace NomDuProjet
     {
         MessageBox.Show("Réservation réussie !");
         
+        // Envoi de l'email à l'administrateur
+        SendEmailToAdmin(newReservation);
+
         // Réinitialiser les champs après la soumission
         clientNameTextBox.Text = string.Empty;
         clientEmailTextBox.Text = string.Empty;
@@ -91,6 +96,38 @@ namespace NomDuProjet
     else
     {
         MessageBox.Show("Erreur lors de la réservation.");
+    }
+}
+
+private void SendEmailToAdmin(Reservation reservation)
+{
+    try
+    {
+        var smtpClient = new SmtpClient("smtp.gmail.com")
+        {
+            Port = 587,
+            Credentials = new NetworkCredential("se552733@gmail.com", "azerqsdftyuighjk"),
+            EnableSsl = true,
+        };
+
+        var mailMessage = new MailMessage
+        {
+            From = new MailAddress("se552733@gmail.com"),
+            Subject = "Nouvelle réservation",
+            Body = $"Une nouvelle réservation a été effectuée.\n\n" +
+                   $"Nom du client: {reservation.ClientName}\n" +
+                   $"Email du client: {reservation.Email}\n" +
+                   $"Chambre réservée: {reservation.RoomId}\n" 
+                
+        };
+
+        mailMessage.To.Add("se552733@gmail.com");
+
+        smtpClient.Send(mailMessage);
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show($"Erreur lors de l'envoi de l'email : {ex.Message}");
     }
 }
 

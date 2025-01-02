@@ -1,0 +1,48 @@
+<Window x:Class="NomDuProjet.ListeRomm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Réserver une chambre" Height="500" Width="600" Background="#F7F7F7">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Liste des chambres disponibles -->
+        <ListView Grid.Row="0" ItemsSource="{Binding AvailableRooms}" 
+                  SelectedItem="{Binding SelectedRoom}" Margin="0,0,0,5" BorderBrush="#D1D5DB" BorderThickness="1">
+            <ListView.Resources>
+                <Style TargetType="{x:Type GridViewColumnHeader}">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Background" Value="#4A90E2"/>
+                    <Setter Property="Foreground" Value="#FFFFFF"/>
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+            </ListView.Resources>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Numéro" DisplayMemberBinding="{Binding RoomNumber}" Width="80"/>
+                    <GridViewColumn Header="Type" DisplayMemberBinding="{Binding RoomType}" Width="120"/>
+                    <GridViewColumn Header="Disponibilité" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding IsAvailable}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#333333"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Image" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Border BorderThickness="1" BorderBrush="#D1D5DB" CornerRadius="5" Padding="2">
+                                    <Image Source="{Binding Image}" Width="100" Height="50" Stretch="UniformToFill" />
+                                </Border>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>
