@@ -114,7 +114,7 @@ namespace DAO
         }
 
         // Récupérer toutes les chambres
-        public List<Room> FindAll()
+       /* public List<Room> FindAll()
         {
             const string query = "SELECT * FROM Rooms";
             List<Room> rooms = new List<Room>();
@@ -146,12 +146,25 @@ namespace DAO
             }
 
             return rooms;
-        }
+        }*/
 
         // DAO/RoomDAO.cs
+
+
+ public List<Room> FindAll()
+    {
+        // Simulation des données depuis une base de données
+        return new List<Room>
+        {
+            new Room { Id = 1, RoomNumber = 101, RoomType = "Single", IsAvailable = true },
+            new Room { Id = 2, RoomNumber = 102, RoomType = "Double", IsAvailable = false },
+            new Room { Id = 3, RoomNumber = 103, RoomType = "Suite", IsAvailable = true }
+        };
+    }
+
 public List<Room> GetAvailableRooms()
 {
-    const string query = "SELECT * FROM Rooms WHERE IsAvailable = @IsAvailable";
+    const string query = "SELECT * FROM rooms WHERE IsAvailable = @IsAvailable";
     List<Room> rooms = new List<Room>();
 
     try

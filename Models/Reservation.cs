@@ -1,15 +1,11 @@
-using System;
-
-namespace NomDuProjet.Models;
+using NomDuProjet.Models;
 
 public class Reservation
 {
     public int Id { get; set; }
-    public int ClientId { get; set; }
-    public Client Client { get; set; }
-    public int RoomId { get; set; }
-    public Room Room { get; set; }
-    public DateTime CheckInDate { get; set; }
-    public DateTime CheckOutDate { get; set; }
-    public string Status { get; set; } // e.g., Pending, Confirmed, Cancelled
+    public String ClientName { get; set; } // Association avec la classe Client
+    public int RoomId { get; set; } // ID de la chambre réservée
+    public DateTime? CheckInDate { get; set; } // Date d'arrivée (nullable)
+    public DateTime? CheckOutDate { get; set; } // Date de départ (nullable)
+    public string Email { get; set; } // Adresse e-mail associée à la réservation
 }

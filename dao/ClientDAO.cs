@@ -164,42 +164,9 @@ namespace DAO
             return clients;
         }
 
-        // DAO/RoomDAO.cs
-public List<Room> GetAvailableRooms()
-{
-    const string query = "SELECT * FROM Rooms WHERE IsAvailable = @IsAvailable";
-    List<Room> rooms = new List<Room>();
+        
 
-    try
-    {
-        using (var connection = DatabaseHelper.GetConnection())
-        using (var command = new MySqlCommand(query, connection))
-        {
-            command.Parameters.AddWithValue("@IsAvailable", true); // Filtrer les chambres disponibles
 
-            using (var reader = command.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    rooms.Add(new Room
-                    {
-                        Id = reader.GetInt32("Id"),
-                        RoomNumber = reader.GetInt32("RoomNumber"),
-                        RoomType = reader.GetString("RoomType"),
-                        IsAvailable = reader.GetBoolean("IsAvailable"),
-                        Image = reader.IsDBNull(reader.GetOrdinal("Image")) ? null : (byte[])reader["Image"]
-                    });
-                }
-            }
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Error retrieving available rooms: {ex.Message}");
-    }
-
-    return rooms;
-}
 
     }
 }

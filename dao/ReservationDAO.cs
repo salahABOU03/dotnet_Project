@@ -11,17 +11,17 @@ namespace DAO
         // Création d'une réservation dans la base de données
         public bool Create(Reservation reservation)
         {
-            const string query = "INSERT INTO Reservations (ClientId, RoomId, CheckInDate, CheckOutDate, Status) VALUES (@ClientId, @RoomId, @CheckInDate, @CheckOutDate, @Status)";
+            const string query = "INSERT INTO Reservations (ClientName, RoomId, CheckInDate, CheckOutDate, Email) VALUES (@ClientName, @RoomId, @CheckInDate, @CheckOutDate, @Email)";
             try
             {
                 using (var connection = DatabaseHelper.GetConnection())
                 using (var command = new MySqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@ClientId", reservation.ClientId);
+                    command.Parameters.AddWithValue("@ClientName", reservation.ClientName);
                     command.Parameters.AddWithValue("@RoomId", reservation.RoomId);
                     command.Parameters.AddWithValue("@CheckInDate", reservation.CheckInDate);
                     command.Parameters.AddWithValue("@CheckOutDate", reservation.CheckOutDate);
-                    command.Parameters.AddWithValue("@Status", reservation.Status);
+                    command.Parameters.AddWithValue("@Email", reservation.Email);
 
                     return command.ExecuteNonQuery() > 0;
                 }
@@ -57,18 +57,18 @@ namespace DAO
         // Mise à jour d'une réservation dans la base de données
         public bool Update(Reservation reservation)
         {
-            const string query = "UPDATE Reservations SET ClientId = @ClientId, RoomId = @RoomId, CheckInDate = @CheckInDate, CheckOutDate = @CheckOutDate, Status = @Status WHERE Id = @Id";
+            const string query = "UPDATE Reservations SET ClientName = @ClientName, RoomId = @RoomId, CheckInDate = @CheckInDate, CheckOutDate = @CheckOutDate, Email = @Email WHERE Id = @Id";
             try
             {
                 using (var connection = DatabaseHelper.GetConnection())
                 using (var command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Id", reservation.Id);
-                    command.Parameters.AddWithValue("@ClientId", reservation.ClientId);
+                    command.Parameters.AddWithValue("@ClientName", reservation.ClientName);
                     command.Parameters.AddWithValue("@RoomId", reservation.RoomId);
                     command.Parameters.AddWithValue("@CheckInDate", reservation.CheckInDate);
                     command.Parameters.AddWithValue("@CheckOutDate", reservation.CheckOutDate);
-                    command.Parameters.AddWithValue("@Status", reservation.Status);
+                    command.Parameters.AddWithValue("@Email", reservation.Email);
 
                     return command.ExecuteNonQuery() > 0;
                 }
@@ -98,11 +98,11 @@ namespace DAO
                             return new Reservation
                             {
                                 Id = reader.GetInt32("Id"),
-                                ClientId = reader.GetInt32("ClientId"),
+                                ClientName = reader.GetString("ClientName"),
                                 RoomId = reader.GetInt32("RoomId"),
                                 CheckInDate = reader.GetDateTime("CheckInDate"),
                                 CheckOutDate = reader.GetDateTime("CheckOutDate"),
-                                Status = reader.GetString("Status")
+                                Email = reader.GetString("Email")
                             };
                         }
                     }
@@ -134,11 +134,11 @@ namespace DAO
                             reservations.Add(new Reservation
                             {
                                 Id = reader.GetInt32("Id"),
-                                ClientId = reader.GetInt32("ClientId"),
+                                ClientName = reader.GetString("ClientName"),
                                 RoomId = reader.GetInt32("RoomId"),
                                 CheckInDate = reader.GetDateTime("CheckInDate"),
                                 CheckOutDate = reader.GetDateTime("CheckOutDate"),
-                                Status = reader.GetString("Status")
+                                Email = reader.GetString("Email")
                             });
                         }
                     }

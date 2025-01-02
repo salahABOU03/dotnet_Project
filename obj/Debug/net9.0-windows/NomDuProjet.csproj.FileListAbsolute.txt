@@ -41,6 +41,7 @@ C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\refint\NomDuProj
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.pdb
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.genruntimeconfig.cache
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\ref\NomDuProjet.dll
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\RoomViewModel.g.cs
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\RoomViewModel.baml
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\RoomListPage.baml
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\RoomListPage.g.cs
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\Reserver.baml
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\Reserver.g.cs
