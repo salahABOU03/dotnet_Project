@@ -22,6 +22,8 @@ C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ClientList
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\First.baml
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ListeReservations.baml
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\ListeRomm.baml
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\LoginPage.baml
+C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\MainWindow.baml
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\Reserver.baml
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\RoomListPage.baml
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\AddClientWindow.g.cs
@@ -37,8 +39,6 @@ C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\RoomListPa
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\App.g.cs
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet_MarkupCompile.cache
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet_MarkupCompile.lref
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\LoginPage.baml
-C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\Views\MainWindow.baml
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.g.resources
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hp\.vscode\dotnet\NomDuProjet\obj\Debug\net9.0-windows\NomDuProjet.AssemblyInfoInputs.cache

@@ -68,42 +68,38 @@ public partial class MainWindow : Window
             manageReservations.Show();
         }
 // Méthode pour télécharger le fichier PDF depuis le projet
-        private void DownloadPdfButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Chemin relatif du fichier dans le projet
-            string sourcePath = @"tt.pdf"; // Le fichier doit être dans le dossier "Files" du projet
+      private void DownloadFileButton_Click(object sender, RoutedEventArgs e)
+{
+    // Chemin absolu vers le fichier dans le dossier Views
+    string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Views", "tt.pdf");
 
-            // Vérifier si le fichier existe
-            if (File.Exists(sourcePath))
-            {
-                // Ouvrir une boîte de dialogue pour choisir l'emplacement de sauvegarde
-                SaveFileDialog saveFileDialog = new SaveFileDialog
-                {
-                    FileName = "monfichier.pdf", // Nom par défaut
-                    Filter = "PDF Files|*.pdf"
-                };
-
-                if (saveFileDialog.ShowDialog() == true)
-                {
-                    string localPath = saveFileDialog.FileName;
-
-                    try
-                    {
-                        // Copier le fichier du projet vers l'emplacement choisi
-                        File.Copy(sourcePath, localPath, overwrite: true);
-                        MessageBox.Show("Téléchargement terminé avec succès !");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Une erreur est survenue : {ex.Message}");
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Le fichier PDF n'a pas été trouvé dans le projet.");
-            }
-        }
+    // Vérifiez si le fichier existe
+    if (!File.Exists(filePath))
+    {
+        MessageBox.Show($"Le fichier n'existe pas à l'emplacement : {filePath}", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+        return;
     }
 
-    
+    // Boîte de dialogue pour choisir l'emplacement de sauvegarde
+    SaveFileDialog saveFileDialog = new SaveFileDialog
+    {
+        FileName = "tt.pdf", // Nom de fichier par défaut
+        Filter = "Fichiers PDF (*.pdf)|*.pdf"
+    };
+
+    if (saveFileDialog.ShowDialog() == true)
+    {
+        string localPath = saveFileDialog.FileName;
+
+        try
+        {
+            // Copier le fichier vers l'emplacement choisi par l'utilisateur
+            File.Copy(filePath, localPath, overwrite: true);
+            MessageBox.Show("Le fichier a été téléchargé avec succès.", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Erreur lors du téléchargement : {ex.Message}", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+    }
+}}

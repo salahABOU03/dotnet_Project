@@ -106,7 +106,7 @@ private void SendEmailToAdmin(Reservation reservation)
         var smtpClient = new SmtpClient("smtp.gmail.com")
         {
             Port = 587,
-            Credentials = new NetworkCredential("se552733@gmail.com", "k"),
+            Credentials = new NetworkCredential("se552733@gmail.com", "qhbf ccxm xhwi uwhp"),
             EnableSsl = true,
         };
 

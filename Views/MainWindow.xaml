@@ -33,7 +33,7 @@
                     <Button Content="View Clients"  Click="ViewClients_Click" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#1abc9c" Foreground="White" BorderBrush="#16a085" BorderThickness="2" Padding="10"/>
                     <Button Content="View Reservations" Click="ViewReservations_Click" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#3498db" Foreground="White" BorderBrush="#2980b9" BorderThickness="2" Padding="10"/>
                     <Button Content="View Rooms" Click="ViewRooms_Click" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#f39c12" Foreground="White" BorderBrush="#e67e22" BorderThickness="2" Padding="10"/>
-                         <Button Content="Télécharger le pdf" Click="DownloadPdfButton_Click" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#f39c12" Foreground="White" BorderBrush="#e67e22" BorderThickness="2" Padding="10"/>
+                         <Button Content="Télécharger le pdf" Click="DownloadFileButton_Click" Height="50" Width="250" Margin="0,10" FontSize="16" Background="#f39c12" Foreground="White" BorderBrush="#e67e22" BorderThickness="2" Padding="10"/>
                         </StackPanel>
             </Grid>
         </DockPanel>
